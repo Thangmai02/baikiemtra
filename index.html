@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+<!--    bai 1 -->
+document.write('<h1> Bai 1</h1>')
+    let arr=[1,2,3,4,7,5,9,11,43]
+    function soLonThu3() {
+        arr.sort(function (a,b){
+            return a - b;
+        })
+        let solont3 =arr[arr.length-3]
+        return solont3;
+
+    }
+    let kq=soLonThu3()
+    document.write(' so lon thu 3 la : '+kq)
+
+
+
+// bai 2
+document.write('<h1> Bai 2 </h1>')
+
+let arr1 = [1,2,3,4,5];
+let arr2 = [1,2,3,4,7,5,9,11,43];
+function timPhanTuChung(){
+    let arrPhanTuChung=[]
+    for(i=0;i<arr1.length;i++){
+       if (arr2.includes(arr1[i])){
+           arrPhanTuChung.push(arr1[i])
+       }
+
+    }
+    return arrPhanTuChung
+
+}
+let kq2=timPhanTuChung()
+document.write(' phan tu chung cua 2 mang la : '+kq2)
+
+// bai 3
+document.write('<h1> Bai 3</h1>')
+let myArr = [11, 2, 3, 4, 5, 6, 7, 14, 22, 33, 44];
+let kiemtra = true;
+
+function kiemtramang() {
+    for (let i = 0; i < myArr.length - 1; i++) {
+        if (myArr[i] >= myArr[i + 1]) {
+            kiemtra = false;
+            break;
+        }
+    }
+
+    if (kiemtra) {
+        document.write(' mang tang dan');
+    } else {
+        document.write('mang khong tang dan');
+    }
+    return kiemtra;
+}
+
+let kq3 = kiemtramang();
+document.write(kq3);
+//  bai 4
+document.write('<h1> Bai 4</h1>')
+class sinhvien {
+    constructor(id,name,score) {
+        this.id=id
+        this.name=name
+        this.score=score
+    }
+    render(){
+        document.write('Id sinh vien: '+this.id+'<br>'+
+                       ' Ten cua sinh vien : '+this.name+'<br>'+
+                        'Diem : '+this.score+'<br>')
+
+    }
+    
+}
+let sinhvien1=new sinhvien(1," thang",10);
+let sinhvien2=new sinhvien(2," thang2",9);
+sinhvien1.render();
+sinhvien2.render()
+
+
+</script>
+</body>
+</html>
